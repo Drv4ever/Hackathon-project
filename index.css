@@ -1,0 +1,275 @@
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+
+ */
+
+/* src/index.css */
+
+/* Global Styles & Reset */
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Modern, clean font stack */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #0B0C10; /* Light, almost grey background */
+  color: #333d47; /* Dark charcoal for text */
+  display: flex; /* Centers content vertically if needed */
+  justify-content: center;
+  align-items: flex-start; /* Align to top, allowing scroll */
+  min-height: 100vh; /* Full viewport height */
+  padding-top: 3rem; /* Space from top */
+}
+
+/* Main App Container */
+.resume-app-container {
+  max-width: 960px; /* Slightly wider for a more spacious feel */
+  width: 90%; /* Responsive width */
+  margin: 0 auto 3rem auto; /* Center with more bottom margin */
+  background: linear-gradient(135deg, #1F2833 0%, #1F2833 100%); /* Subtle white gradient */
+  border-radius: 16px; /* Larger, softer corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Deeper, softer shadow */
+  padding: 3.5rem; /* Generous padding */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  color: #66fcf1; /* Deep indigo for a strong, professional presence */
+  margin-bottom: 2.5rem;
+  font-size: 2.6em; /* More prominent title */
+  font-weight: 600; /* Semi-bold */
+  letter-spacing: -0.03em; /* Tighten letter spacing slightly */
+  position: relative; /* For the subtle underline effect */
+  padding-bottom: 0.8rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px; /* Short, impactful line */
+  height: 4px;
+  background-color: #66FCF1; /* Complementary blue */
+  border-radius: 2px;
+}
+
+h3 {
+  color: #2c3e50; /* Darker blue-grey */
+  margin-top: 3.5rem; /* More space above sections */
+  margin-bottom: 1.2rem;
+  font-size: 1.8em;
+  font-weight: 500;
+  border-left: 5px solid #4a63e7; /* Accent border on the left */
+  padding-left: 15px; /* Space for the border */
+}
+
+/* Form Layout */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem; /* More space between elements */
+  padding-bottom: 2rem; /* Space before potential error messages */
+  border-bottom: 1px solid #9f6262; /* Subtle separator line */
+}
+
+input[type="file"] {
+  display: block; /* Ensures it takes full width */
+  width: 100%;
+  max-width: 500px; /* A bit wider for better target area */
+  padding: 1rem 1.2rem;
+  border: 1px solid #cdd0d4; /* Softer border color */
+  border-radius: 10px; /* Slightly more rounded */
+  font-size: 1em;
+  color: #000000;
+  background-color: #C5C6C7;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #9ab4f2;
+}
+
+input[type="file"]:focus {
+  border-color: #4a63e7;
+  box-shadow: 0 0 0 3px rgba(74, 99, 231, 0.2); /* Soft focus ring */
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(45deg, #66fcf1 0%, #043693 100%); /* Blue gradient */
+  color: white;
+  padding: 1.1rem 2.5rem; /* Larger touch area */
+  border: none;
+  border-radius: 10px; /* Consistent rounding */
+  cursor: pointer;
+  font-size: 1.15em; /* Slightly larger text */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft button shadow */
+  min-width: 220px; /* Ensure button has good minimum width */
+}
+
+button:hover {
+  background: linear-gradient(45deg, #007d8b 0%, #1d2a61 100%); /* Darker gradient on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  transform: translateY(-3px); /* More noticeable lift */
+}
+
+button:disabled {
+  background: #d4d8de; /* Muted grey for disabled */
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  color: #888;
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c; /* Stronger red */
+  background-color: #fde8e8; /* Lighter red background */
+  border: 1px solid #ecc0c0;
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin-top: 2rem; /* More space */
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+/* Loading Indicator */
+.loading-indicator {
+  text-align: center;
+  margin-top: 2rem;
+  color: #666;
+  font-style: italic;
+  font-size: 1.1em;
+  padding: 1rem;
+  background-color: #eaf0f6;
+  border-radius: 10px;
+  border: 1px solid #d0e0f0;
+}
+
+/* Questions List */
+.questions-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.questions-list li {
+  background-color: #f7f9fc; /* Very light blue-grey */
+  border: 1px solid #e0e6f0; /* Soft border */
+  margin-bottom: 1rem; /* Space between questions */
+  padding: 1.2rem 1.8rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* Subtle shadow for list items */
+  line-height: 1.5; /* Better readability */
+}
+
+.questions-list li:hover {
+  background-color: #ebf2fa; /* Slightly darker on hover */
+  transform: translateY(-2px); /* Slight lift */
+}
+
+.questions-list li::before {
+  content: '✓'; /* Simple, professional checkmark */
+  margin-right: 15px;
+  font-size: 1.3em;
+  color: #28a745; /* Success green */
+  font-weight: bold;
+  line-height: 1; /* Align with text */
+}
+
+/* Feedback Section */
+.feedback-section {
+  background-color: #eef7f0; /* Very light green, calming */
+  border: 1px solid #d0e0d0; /* Soft green border */
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 3rem; /* More space */
+  line-height: 1.7;
+  font-size: 1.05em;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+.feedback-section p {
+  margin-bottom: 0;
+}
